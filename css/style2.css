@@ -268,8 +268,12 @@ header {
   padding-left: 0;
 }
 
-
-
+@media only screen and (max-width: 991px) {
+  .project-entry p {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
