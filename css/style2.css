@@ -250,7 +250,7 @@ span {
 .project-entry {
   text-align: center;
   text-align: left;
-  min-height: 411px !important;
+  height: 432px !important;
 }
 .project-entry a {
   text-align: left;
