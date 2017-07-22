@@ -28,6 +28,10 @@ div h2, #online-classes-tag {
 .project-entry {
   padding: 0 5%;
 }
+div.education-entry{
+  min-height: 162px;
+  border: 1px black solid;
+}
 
 
 h1 {
@@ -82,7 +86,11 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
+  position: relative;
+  right: 3em;
+}
+.education-entry a h3 {
+  text-align: center;
 }
 
 p {
@@ -214,6 +222,12 @@ span {
   }
 }
 
+@media only screen and (max-width:991px) {
+  .date-text {
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
@@ -273,12 +287,29 @@ header {
     width: 50%;
     margin: 0 auto;
   }
+  .project-entry p.date-text {
+    width: 100%;
+  }
+  .project-title{
+    text-align: center !important;
+  }
+  .project-title h3{
+    padding-right: 0px !important;
+  }
+  div.education-entry{
+  min-height: 188px;
+  }
 }
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
   }
+}
+@media only screen and (max-width: 776px){
+    div.education-entry{
+      min-height: 120px;
+    }
 }
 @media only screen and (max-width: 450px) {
   h1,

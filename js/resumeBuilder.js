@@ -5,19 +5,19 @@ var education = {
         "name": "Bowie State University",
         "city": "Bowie, MD",
         "majors": ["Biology"],
-        "dates": "2012-2014--- ",
+        "dates": "2012-2014:",
         "url": "www.umd.edu"
     }, {
         "name": "University of Maryland",
         "city": "College Park, MD",
         "majors": ["Anthropology"],
-        "dates": "2014-2016---: ",
+        "dates": "2014-2016: ",
         "url": "www.bowiestate.edu"
     }, {
         "name": "General Assembly",
         "city": "Washington, D.C.",
         "majors": ["Web Development Immersive"],
-        "dates": "2017---: ",
+        "dates": "2017: ",
         "url": "https://generalassemb.ly/"
     }],
     "onlineCourses": [{
@@ -258,9 +258,9 @@ projects.display = function() {
 projects.display();
 
 function displayEducation() {
-    $("#education").append(HTMLschoolStart);
 
     for (i = 0; i < education.schools.length; i++) {
+        $("#education .container .row").append(HTMLschoolStart);
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
         var formattedSchoolDegree = HTMLschoolDegree.replace("%data%","");
         var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
@@ -273,8 +273,9 @@ function displayEducation() {
         $(".education-entry:last").append(formattedSchoolLocation);
     }
 
-    $(".education-entry:last").append(HTMLonlineClasses);
+    $("#education .container .row").append(HTMLonlineClasses);
     for (i = 0; i < education.onlineCourses.length; i++) {
+        $("#education .container .row").append(HTMLschoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
         var formattedOnlineTitleSchool = formattedOnlineTitle  +formattedOnlineSchool;
